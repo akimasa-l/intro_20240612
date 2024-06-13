@@ -1,0 +1,130 @@
+\documentclass{jlreq}
+\usepackage{graphicx}
+\usepackage[margin=1in]{geometry}
+\usepackage{tikz}
+\usepackage{tcolorbox}
+\usepackage{enumitem}
+\usepackage{fontspec}
+\usepackage{background}
+
+% Set a cute font
+\setmainfont{Comic Sans MS}
+
+% Background settings
+\backgroundsetup{
+  scale=1,
+  color=black,
+  opacity=0.1,
+  angle=0,
+  position=current page.south,
+  vshift=30pt,
+  contents={%
+    \includegraphics[width=0.8\paperwidth]{example-image}
+  }
+}
+
+\pagestyle{empty}
+
+\definecolor{lightpink}{RGB}{255,182,193}
+\definecolor{lightblue}{RGB}{173,216,230}
+\definecolor{lightgreen}{RGB}{144,238,144}
+\definecolor{lightyellow}{RGB}{255,255,224}
+\definecolor{lightpurple}{RGB}{216,191,216}
+
+% Define custom cute box style
+\tcbset{
+  cute/.style={
+    colframe=white,
+    colback=white,
+    boxrule=0pt,
+    sharp corners=uphill,
+    enhanced jigsaw,
+    borderline={0.5mm}{0mm}{lightpink},
+    drop shadow={black!50!white},
+    fonttitle=\bfseries,
+    coltitle=black,
+    colbacktitle=lightpink!30
+  }
+}
+
+\begin{document}
+\begin{center}
+
+\begin{tikzpicture}
+    % Profile picture box
+    \draw[rounded corners=15pt, thick, color=lightpink, fill=lightpink!30] (0,0) rectangle (6,6);
+    \node at (3,3) {\includegraphics[scale=0.4]{example-image}};
+    
+    % Fields
+    \node[anchor=west] at (7,5.5) {\textbf{名前}};
+    \draw[rounded corners=10pt, thick, color=lightblue, fill=lightblue!30] (9,5.3) rectangle (17,5.7);
+    \node[anchor=west] at (9.1,5.5) {\{氏名・ふりがな\}};
+    
+    \node[anchor=west] at (7,5) {\textbf{入団年度}};
+    \draw[rounded corners=10pt, thick, color=lightgreen, fill=lightgreen!30] (9,4.8) rectangle (17,5.2);
+    \node[anchor=west] at (9.1,5) {\{入団年度\}};
+    
+    \node[anchor=west] at (7,4.5) {\textbf{パート}};
+    \draw[rounded corners=10pt, thick, color=lightyellow, fill=lightyellow!30] (9,4.3) rectangle (17,4.7);
+    \node[anchor=west] at (9.1,4.5) {\{パート\}};
+    
+    \node[anchor=west] at (7,4) {\textbf{生年月日}};
+    \draw[rounded corners=10pt, thick, color=lightpurple, fill=lightpurple!30] (9,3.8) rectangle (17,4.2);
+    \node[anchor=west] at (9.1,4) {\{生年月日\}};
+    
+    \node[anchor=west] at (7,3.5) {\textbf{出身}};
+    \draw[rounded corners=10pt, thick, color=lightpink, fill=lightpink!30] (9,3.3) rectangle (17,3.7);
+    \node[anchor=west] at (9.1,3.5) {\{出身地・出身校（任意）\}};
+\end{tikzpicture}
+
+\vspace{1cm}
+
+% Sections
+\begin{tcolorbox}[cute, title=\textbf{大学・学部・学科・専攻}]
+\{大学名・学部・学科（科類）・専攻\}
+\end{tcolorbox}
+
+\vspace{0.5cm}
+
+\begin{tcolorbox}[cute, title=\textbf{部活・兼サー}]
+\{部活・兼サーなど\}
+\end{tcolorbox}
+
+\vspace{0.5cm}
+
+\begin{tcolorbox}[cute, title=\textbf{自分のパートの楽器を始めたきっかけ}]
+\{自分のパートの楽器を始めたきっかけ\}
+\end{tcolorbox}
+
+\vspace{0.5cm}
+
+\begin{tcolorbox}[cute, title=\textbf{執行代の時の役職}]
+\{執行代の時の役職\}
+\end{tcolorbox}
+
+\vspace{0.5cm}
+
+\begin{tcolorbox}[cute, title=\textbf{趣味・最近ハマっていること}]
+\{趣味・最近ハマっていること\}
+\end{tcolorbox}
+
+\vspace{0.5cm}
+
+\begin{tcolorbox}[cute, title=\textbf{フィロでやりたい曲}]
+\{フィロでやりたい曲\}
+\end{tcolorbox}
+
+\vspace{0.5cm}
+
+\begin{tcolorbox}[cute, title=\textbf{今年達成したいこと}]
+\{今年達成したいこと\}
+\end{tcolorbox}
+
+\vspace{0.5cm}
+
+\begin{tcolorbox}[cute, title=\textbf{最後に一言}]
+\{最後に一言\}
+\end{tcolorbox}
+
+\end{center}
+\end{document}
